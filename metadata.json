@@ -1,0 +1,8 @@
+{
+  "name": "Remix Pragmatic BIM Solution",
+  "description": "BIM Training \u0026 AEC Consultancy Platform - BIMifying the world bit by bit",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

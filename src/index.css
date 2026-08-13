@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --pbs-green-primary: #16a34a;
+    --pbs-green-light: #22c55e;
+    --pbs-green-dark: #15803d;
+    --pbs-green-glow: rgba(34, 197, 94, 0.15);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
+
+/* PBS Logo Badge animation & frame styling */
+.pbs-logo-frame {
+  border: 2px solid #22c55e;
+  border-radius: 18px 4px 18px 4px;
+  position: relative;
+}
+
+/* Pulse highlight for CTA */
+@keyframes pbs-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+}
+
+.pbs-btn-pulse {
+  animation: pbs-pulse 2s infinite;
+}
+
+/* Shimmer animation for Learning Progress Bar */
+@keyframes shimmer-slide {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer-bar {
+  background: linear-gradient(
+    90deg,
+    #10b981 0%,
+    #34d399 25%,
+    #fbbf24 50%,
+    #34d399 75%,
+    #10b981 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-slide 3s infinite linear;
+}
+
+@keyframes head-glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 12px 3px rgba(52, 211, 153, 0.9), 0 0 20px 6px rgba(251, 191, 36, 0.6);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 18px 6px rgba(52, 211, 153, 1), 0 0 28px 10px rgba(251, 191, 36, 0.9);
+    transform: scale(1.15);
+  }
+}
+
+.progress-head-glow {
+  animation: head-glow-pulse 1.5s infinite ease-in-out;
+}
